@@ -60,3 +60,22 @@ Once the data was standardized, I imported each table into PostgreSQL using a re
                 <img src="images/edge_ERD.png" alt="A diagram showing tables " />
                 <caption>Figure 1. Final PostgreSQL schema for the EDGE datasets.</caption>
             </div>
+            <h2>Challenges & Solutions</h2>
+            <h3>Inconsistent Naming Conventions</h3>
+            <p>Each EDGE program used different field names and formats. I analyzed each table individually, identified shared fields, and created a structure that could support all five datasets without losing important details.</p>
+
+            <h3>Schema mismatches from ArcGIS</h3>
+            <p>ArcGIS exports didn’t align with PostgreSQL’s data types. I redesigned the schemas to ensure compatibility and consistency.</p>
+
+            <h3>Currency formatting issues</h3>
+            <p>Monetary values included symbols and commas. I removed these formatting characters before type conversion.</p>
+
+            <h3>Logical errors and misspellings</h3>
+            <p>I corrected inconsistent spellings, fixed malformed entries, and removed unnecessary fields to improve data quality.</p>
+
+            
+            <h2>Data Modeling Concepts</h2>
+            <p>The EDGE datasets are flat, meaning each table stands alone without primary keys, foreign keys, or hierarchical relationships. Even though some tables share similar attributes, they are not relationally linked and can be analyzed independently.</p>
+            
+            
+    
