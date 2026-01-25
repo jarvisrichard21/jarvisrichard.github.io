@@ -47,6 +47,12 @@ The result is a reliable pipeline of high‑quality data that can support analyt
 After establishing a consistent schema pattern, I cleaned the raw files by removing unnecessary fields, correcting misspellings, and resolving logical inconsistencies.
 Once the data was standardized, I imported each table into PostgreSQL using a reproducible loading process. This pipeline consolidates all five EDGE datasets into a single, structured data source that can support future analytical reports and dashboards.</p>
 
+        <h2>Technical Details</h2>
+        <ul>
+            <li>Standardized geographic fields (ZIP code, state, city, county) were cleaned and validated.</li>
+            <li>Currency fields included symbols and commas, which prevented type conversion. I used Excel’s Find and Replace tool to strip formatting before loading.</li>
+            <li>ArcGIS exports required schema redesign to align with PostgreSQL’s data types.</li>
+        </ul>
 
             </header>
 
