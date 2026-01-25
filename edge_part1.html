@@ -49,12 +49,13 @@ After establishing a consistent schema pattern, I cleaned the raw files by remov
 Once the data was standardized, I imported each table into PostgreSQL using a reproducible loading process. This pipeline consolidates all five EDGE datasets into a single, structured data source that can support future analytical reports and dashboards.</p>
 
                 
-
+         <hr/>
         <h2>Technical Details</h2>
         <ul>
             <li>Standardized geographic fields (ZIP code, state, city, county) were cleaned and validated.</li>
             <li>Currency fields included symbols and commas, which prevented type conversion. I used Excel’s Find and Replace tool to strip formatting before loading.</li>
             <li>ArcGIS exports required schema redesign to align with PostgreSQL’s data types.</li>
+        <hr/>
         </ul>
          <h2>Challenges & Solutions</h2>
             <h3>Inconsistent Naming Conventions</h3>
@@ -69,7 +70,7 @@ Once the data was standardized, I imported each table into PostgreSQL using a re
             <h3>Logical errors and misspellings</h3>
             <p>I corrected inconsistent spellings, fixed malformed entries, and removed unnecessary fields to improve data quality.</p>
 
-            
+        <hr/>
             <h2>Data Modeling Concepts</h2>
             <p>The EDGE datasets are flat, meaning each table stands alone without primary keys, foreign keys, or hierarchical relationships. Even though some tables share similar attributes, they are not relationally linked and can be analyzed independently.</p>
 
@@ -79,7 +80,7 @@ Once the data was standardized, I imported each table into PostgreSQL using a re
             </figure>
 
 
-                
+        <hr/>
              <h2>What Comes Next</h2>   
               <p>With the cleaned and standardized data now stored in PostgreSQL, the next phase of the project will focus on analysis. 
             I plan to explore how financial incentives influence job creation, industry growth, and investment patterns across Memphis. 
