@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDGE Data Project – Part 3: Visualizations</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* Visualization Grid */
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .viz-grid figure {
+            margin: 0;
+        }
+
+        .viz-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            background: #ddd; /* placeholder background */
+        }
+
+        .viz-grid figcaption {
+            margin-top: 0.5em;
+            font-size: 0.9em;
+            opacity: 0.85;
+        }
+
+        /* Bottom navigation */
+        .nav-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3em;
+        }
+
+        .nav-bottom a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 480px) {
+            .nav-bottom {
+                flex-direction: column;
+                gap: 0.75em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Jarvis Richard</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/jarvisrichard/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/jarvisrichard21" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <section class="post">
+            <header class="major">
+                <h1>EDGE Data Project – Part 3: Visualizations</h1>
+                <p>This section presents a curated set of visuals that support the findings from Part 2. Each chart highlights a key aspect of EDGE’s economic impact across Memphis.</p>
+            </header>
+
+            <h2>Investment Across Programs</h2>
+            <div class="viz-grid">
+                <figure>
+                    <img src="images/placeholder.png" alt="Investment by Program Chart">
+                    <figcaption>Figure 1. Total investment by EDGE program.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/placeholder.png" alt="PILOT Investment Breakdown">
+                    <figcaption>Figure 2. PILOT investment distribution across industries.</figcaption>
+                </figure>
+            </div>
+
+            <hr/>
+
+            <h2>Jobs Created or Retained</h2>
+            <div class="viz-grid">
+                <figure>
+                    <img src="images/placeholder.png" alt="Jobs by Program Chart">
+                    <figcaption>Figure 3. Jobs created or retained by EDGE program.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/placeholder.png" alt="PILOT Jobs by Industry">
+                    <figcaption>Figure 4. Jobs created by industry within PILOT projects.</figcaption>
+                </figure>
+            </div>
+
+            <hr/>
+
+            <h2>Geographic Distribution</h2>
+            <div class="viz-grid">
+                <figure>
+                    <img src="images/placeholder.png" alt="ZIP Code Map">
+                    <figcaption>Figure 5. Distribution of EDGE projects across Memphis ZIP codes.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/placeholder.png" alt="Bond Projects by ZIP">
+                    <figcaption>Figure 6. Industrial Revenue Bond projects concentrated in 38116.</figcaption>
+                </figure>
+            </div>
+
+            <hr/>
+
+            <div class="nav-bottom">
+                <a href="edge_part2.html" class="nav-left">← Back to Part 2: Analysis</a>
+                <a href="edge.html" class="nav-right">Return to Project Overview →</a>
+            </div>
+
+        </section>
+    </div> <!-- closes #main -->
+
+</div> <!-- closes #wrapper -->
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
