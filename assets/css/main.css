@@ -4671,6 +4671,35 @@ input, select, textarea {
 			}
 
 		}
+/* Bottom navigation links */
+.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.nav-bottom a {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.nav-left {
+    text-align: left;
+}
+
+.nav-right {
+    text-align: right;
+}
+
+/* Optional: mobile stacking */
+@media screen and (max-width: 480px) {
+    .nav-bottom {
+        flex-direction: column;
+        gap: 0.75em;
+    }
+}
 
 	@media screen and (max-width: 980px) {
 
@@ -4688,5 +4717,6 @@ input, select, textarea {
 		}
 
 	}
+
 
 
