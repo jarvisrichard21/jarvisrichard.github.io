@@ -4717,31 +4717,8 @@ input, select, textarea {
 		}
 
 	}
-/* Remove the default triangle icon */
-.viz-expand summary {
-    list-style: none;
-    cursor: zoom-in;
-}
 
-.viz-expand[open] summary {
-    cursor: zoom-out;
-}
 
-/* Make the summary image look normal */
-.viz-expand summary img {
-    width: 100%;
-    max-width: 700px; /* adjust to taste */
-    display: block;
-    margin: 0 auto;
-}
-
-/* Full-size image when expanded */
-.viz-expand .full-image img {
-    width: 100%;
-    max-width: 1400px; /* large, crisp version */
-    display: block;
-    margin: 1.5em auto;
-}
 
 
 
