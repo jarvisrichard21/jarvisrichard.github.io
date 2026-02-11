@@ -4689,23 +4689,4 @@ input, select, textarea {
 
 	}
 
-.nav-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
 
-.nav-bottom a {
-    font-size: 1em;
-    text-decoration: none;
-}
-
-.nav-left {
-    text-align: left;
-}
-
-.nav-right {
-    text-align: right;
-}
