@@ -43,11 +43,14 @@ It involves three stages: extracting data from external sources, transforming it
 The result is a reliable pipeline of high‑quality data that can support analytics, reporting, dashboards, and other data‑driven products.</p>
         
             
-          <h2>What I Built</h2>                                                                                                                                                                                                                                     
-<p>This project required a full redesign of the raw civic data before it could be loaded into PostgreSQL.
-I extracted raw economic, financial, and geospatial data from the Memphis Open Data portal. Because the source files were generated through ArcGIS, the original tables had to be redesigned to fit PostgreSQL’s data types and schema rules.
-After establishing a consistent schema pattern, I cleaned the raw files by removing unnecessary fields, correcting misspellings, and resolving logical inconsistencies.
-Once the data was standardized, I imported each table into PostgreSQL using a reproducible loading process. This pipeline consolidates all five EDGE datasets into a single, structured data source that can support future analytical reports and dashboards.</p>
+          Extracting Data From External Sources
+<p>The extraction phase involved downloading the raw EDGE program files from the Memphis Open Data Portal and preparing them for import into a PostgreSQL database. This step required validating each file’s structure and ensuring the source data could be recognized by PostgreSQL before any transformation work could begin.</p>
+Challenges
+<ul><li><strong>Incompatible data types:</strong> Several fields used ArcGIS‑specific types that PostgreSQL could not interpret.</li><li><strong>Schema mismatches:</strong> The original tables did not align with PostgreSQL’s schema rules, causing import failures.</li></ul>
+Solution
+<ul><li>I rewrote the table schemas to replace ArcGIS‑specific field types with standard PostgreSQL types and restructured the tables to meet PostgreSQL’s schema requirements. This ensured every file could be imported cleanly and consistently.</li></ul>
+Why This Step Mattered
+<p>PostgreSQL will reject any file with incompatible types or invalid schema definitions. Resolving these issues during extraction ensured the pipeline would not fail during the load phase and created a stable foundation for all downstream transformation and analysis.</p>
 
                 
          <hr/>
