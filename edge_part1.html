@@ -91,17 +91,8 @@ The transformation phase focused on cleaning, standardizing, and restructuring t
 <p>
 Transformation is the most critical phase of the ETL pipeline. Without standardizing data types, fixing schema mismatches, and resolving inconsistencies, PostgreSQL would reject the files during loading or produce unreliable analytical results. By completing these transformations up front, I ensured that the final database would be clean, consistent, and ready for accurate analysis.
 </p>
-        <hr/>
-            <h2>Data Modeling Concepts</h2>
-            <p>The EDGE datasets are flat, meaning each table stands alone without primary keys, foreign keys, or hierarchical relationships. Even though some tables share similar attributes, they are not relationally linked and can be analyzed independently.</p>
-
-             <figure class="image main">
-                <img src="images/edge_ERD.png" alt="Entity relationship diagram showing the final PostgreSQL schema for the EDGE datasets"/>
-                <figcaption>Figure 1. Final PostgreSQL schema for the EDGE datasets.</figcaption>
-            </figure>
-
-
-        <hr/>
+            
+        
              <h2>What Comes Next</h2>   
               <p>With the cleaned and standardized data now stored in PostgreSQL, the next phase of the project will focus on analysis. 
             I plan to explore how financial incentives influence job creation, industry growth, and investment patterns across Memphis. 
