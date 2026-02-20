@@ -1,184 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Visuals</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<h2>Geographic Distribution</h2>
 
-    <style>
-        /* Visualization Grid */
-        .viz-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2em;
-            margin-top: 2em;
-        }
-
-        .viz-grid figure {
-            margin: 0;
-        }
-
-        .viz-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            background: #ddd; /* placeholder background */
-        }
-
-        .viz-grid figcaption {
-            margin-top: 0.5em;
-            font-size: 0.9em;
-            opacity: 0.85;
-        }
-
-       
-.map-note {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.map-embed {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.viz-grid figure img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}       
-    </style>
-</head>
-
-<body>
-<div id="wrapper">
-
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo">Jarvis Richard</a>
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav">
-        <ul class="links">
-            <li><a href="index.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/jarvisrichard/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://github.com/jarvisrichard21" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-    </nav>
-
-    <!-- Main -->
-    <div id="main">
-
-        <section class="post">
-            <header class="major">
-                <h1>Visuals</h1>
-                <p>This section presents a curated set of visuals that support the findings from Part 2. Each chart highlights a key aspect of EDGE’s economic impact across Memphis.</p>
-            </header>
-<h2>Entity Relationship Diagram </h2>
 <div class="viz-grid">
-    <figure>
-        <img src="images/edge_ERD.png" alt="Entity relationship diagram showing the final PostgreSQL schema for the EDGE datasets">
-        <figcaption>Figure A. Final PostgreSQL schema for the EDGE datasets.</figcaption>
-    </figure>
-</div>
-       </section>
-    </hr>
- <h2>Investment Across Programs</h2>
- <div class="viz-grid">
-    <figure>
-        <img src="images/total_investment.png" alt="Investment by Program Chart">  
-        <figcaption>Figure 1. Total investment by EDGE program.</figcaption>
-    </figure>
-     
-    <figure>
-        <img src="images/pilot_breakdown.png" alt="PILOT Projects by Project Type">
-        <figcaption>Figure 2. Distribution and Manufacturing account for more than 60% of all PILOT approvals, reflecting Memphis’s logistics‑driven economic base.
- NOTE: “None” and “Null” categories (4.57% combined) were excluded because they do not represent actual project types.'Other' represents several very small categories that individually account for a negligible share of projects.” </figcaption>
-    </figure>
-</div>
-            <hr/>
-            <h2>Total Jobs by EDGE Program</h2>
-            <div class="viz-grid">
-                <figure>
-                    <img src="images/total_jobs.png" alt="Jobs by Program Chart">
-                    <figcaption>Figure 3. Total Jobs by EDGE program.'Other' includes Fast Track Grants, Economic Development Grants, Port of Memphis approvals, and FTZ‑77 (Foreign Trade Zone) designations. FTZ‑77 is a federal trade‑facilitation program administered locally by EDGE that allows companies to delay, reduce, or eliminate import duties.”</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/top_pilotjobs.png" alt="PILOT Jobs by Industry">
-                    <figcaption>Figure 4. Distribution, Office/HQ, and Manufacturing together represent 95.7% of all jobs supported by PILOT projects. This concentration reflects Memphis’s economic strengths in logistics, corporate operations, and manufacturing.</figcaption>
-                </figure>
-            </div>
-            <hr/>
-            <h2>Geographic Distribution</h2>
-<div class="viz-grid">
-
-    <!-- Static ZIP map -->
     <figure>
         <img src="images/geo_edgezip.png" alt="ZIP Code Map">
         <figcaption>Figure 5. Distribution of EDGE projects across Memphis ZIP codes.</figcaption>
     </figure>
 
-    <!-- Static IRB map -->
     <figure>
         <img src="images/IRB_zipcode.png" alt="Bond Projects by ZIP">
         <figcaption>Figure 6. Industrial Revenue Bond projects concentrated in 38116. The blue shaded area on the map is zip code 38116.</figcaption>
     </figure>
-</hr>
-    <!-- Interactive ZIP map -->
-    <div>
-        <p class="map-note">Interactive version (if supported by your browser):</p>
-        <div class="map-embed">
-            <iframe title="Geographic Distribution of EDGE Projects" aria-label="Choropleth map"
-                id="datawrapper-chart-YZJZJ"
-                src="https://datawrapper.dwcdn.net/YZJZJ/1/"
-                scrolling="no" frameborder="0"
-                style="width: 0; min-width: 100% !important; border: none;"
-                height="528" data-external="1"></iframe>
-        </div>
+</div>
+
+<hr>
+
+<!-- Interactive ZIP map -->
+<div>
+    <p class="map-note">Interactive version (if supported by your browser):</p>
+    <div class="map-embed">
+        <iframe title="Geographic Distribution of EDGE Projects" aria-label="Choropleth map"
+            id="datawrapper-chart-YZJZJ"
+            src="https://datawrapper.dwcdn.net/YZJZJ/1/"
+            scrolling="no" frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;"
+            height="528" data-external="1"></iframe>
     </div>
+</div>
 
-   <!-- Interactive IRB map -->
+<!-- Interactive IRB map -->
 <div style="position: relative; padding-bottom: 70%; height: 0;">
-  <iframe 
-      title="38116 Leads Memphis in IRB‑Financed Projects"
-      aria-label="Choropleth map"
-      id="datawrapper-chart-IEhPW"
-      src="https://datawrapper.dwcdn.net/IEhPW/2/"
-      scrolling="no"
-      frameborder="0"
-      style="position: absolute; top:0; left:0; width:100%; height:100%; border: none;"
-      data-external="1">
-  </iframe>
+    <iframe 
+        title="38116 Leads Memphis in IRB‑Financed Projects"
+        aria-label="Choropleth map"
+        id="datawrapper-chart-IEhPW"
+        src="https://datawrapper.dwcdn.net/IEhPW/2/"
+        scrolling="no"
+        frameborder="0"
+        style="position: absolute; top:0; left:0; width:100%; height:100%; border: none;"
+        data-external="1">
+    </iframe>
 </div>
-
-</div> <!-- closes .viz-grid -->
-
-<!-- Bottom Navigation -->
-<div class="nav-bottom">
-    <a href="edge_part2.html" class="nav-left">← Back to Part 2: Analysis</a>
-    <a href="edge.html" class="nav-right">Return to EDGE Overview →</a>
-</div>
-
-    
-</div> <!-- closes .viz-grid -->
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
