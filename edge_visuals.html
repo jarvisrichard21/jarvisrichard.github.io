@@ -33,7 +33,6 @@
             opacity: 0.85;
         }
 
-       
 .map-note {
     margin-top: 1rem;
     font-size: 0.9rem;
@@ -49,7 +48,7 @@
     width: 100%;
     height: auto;
     border-radius: 4px;
-}       
+}
     </style>
 </head>
 
@@ -82,6 +81,7 @@
                 <h1>Visuals</h1>
                 <p>This section presents a curated set of visuals that support the findings from Part 2. Each chart highlights a key aspect of EDGE’s economic impact across Memphis.</p>
             </header>
+
 <h2>Entity Relationship Diagram </h2>
 <div class="viz-grid">
     <figure>
@@ -90,7 +90,9 @@
     </figure>
 </div>
        </section>
-    </hr>
+
+<hr>
+
  <h2>Investment Across Programs</h2>
  <div class="viz-grid">
     <figure>
@@ -104,32 +106,39 @@
  NOTE: “None” and “Null” categories (4.57% combined) were excluded because they do not represent actual project types.'Other' represents several very small categories that individually account for a negligible share of projects.” </figcaption>
     </figure>
 </div>
-            <hr/>
-            <h2>Total Jobs by EDGE Program</h2>
-            <div class="viz-grid">
-                <figure>
-                    <img src="images/total_jobs.png" alt="Jobs by Program Chart">
-                    <figcaption>Figure 3. Total Jobs by EDGE program.'Other' includes Fast Track Grants, Economic Development Grants, Port of Memphis approvals, and FTZ‑77 (Foreign Trade Zone) designations. FTZ‑77 is a federal trade‑facilitation program administered locally by EDGE that allows companies to delay, reduce, or eliminate import duties.”</figcaption>
-                </figure>
 
-                <figure>
-                    <img src="images/top_pilotjobs.png" alt="PILOT Jobs by Industry">
-                    <figcaption>Figure 4. Distribution, Office/HQ, and Manufacturing together represent 95.7% of all jobs supported by PILOT projects. This concentration reflects Memphis’s economic strengths in logistics, corporate operations, and manufacturing.</figcaption>
-                </figure>
-            </div>
-            <hr/>
-            <h2>Geographic Distribution</h2>
+<hr>
 
+<h2>Total Jobs by EDGE Program</h2>
 <div class="viz-grid">
+    <figure>
+        <img src="images/total_jobs.png" alt="Jobs by Program Chart">
+        <figcaption>Figure 3. Total Jobs by EDGE program.'Other' includes Fast Track Grants, Economic Development Grants, Port of Memphis approvals, and FTZ‑77 (Foreign Trade Zone) designations. FTZ‑77 is a federal trade‑facilitation program administered locally by EDGE that allows companies to delay, reduce, or eliminate import duties.”</figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/top_pilotjobs.png" alt="PILOT Jobs by Industry">
+        <figcaption>Figure 4. Distribution, Office/HQ, and Manufacturing together represent 95.7% of all jobs supported by PILOT projects. This concentration reflects Memphis’s economic strengths in logistics, corporate operations, and manufacturing.</figcaption>
+    </figure>
+</div>
+
+<hr>
+
+<h2>Geographic Distribution</h2>
+<div class="viz-grid">
+
+    <!-- Static ZIP map -->
     <figure>
         <img src="images/geo_edgezip.png" alt="ZIP Code Map">
         <figcaption>Figure 5. Distribution of EDGE projects across Memphis ZIP codes.</figcaption>
     </figure>
 
+    <!-- Static IRB map -->
     <figure>
         <img src="images/IRB_zipcode.png" alt="Bond Projects by ZIP">
         <figcaption>Figure 6. Industrial Revenue Bond projects concentrated in 38116. The blue shaded area on the map is zip code 38116.</figcaption>
     </figure>
+
 </div>
 
 <hr>
@@ -149,18 +158,17 @@
 
 <!-- Interactive IRB map -->
 <div style="position: relative; padding-bottom: 70%; height: 0;">
-    <iframe 
-        title="38116 Leads Memphis in IRB‑Financed Projects"
-        aria-label="Choropleth map"
-        id="datawrapper-chart-IEhPW"
-        src="https://datawrapper.dwcdn.net/IEhPW/2/"
-        scrolling="no"
-        frameborder="0"
-        style="position: absolute; top:0; left:0; width:100%; height:100%; border: none;"
-        data-external="1">
-    </iframe>
+  <iframe 
+      title="38116 Leads Memphis in IRB‑Financed Projects"
+      aria-label="Choropleth map"
+      id="datawrapper-chart-IEhPW"
+      src="https://datawrapper.dwcdn.net/IEhPW/2/"
+      scrolling="no"
+      frameborder="0"
+      style="position: absolute; top:0; left:0; width:100%; height:100%; border: none;"
+      data-external="1">
+  </iframe>
 </div>
-</div> <!-- closes .viz-grid -->
 
 <!-- Bottom Navigation -->
 <div class="nav-bottom">
@@ -168,8 +176,9 @@
     <a href="edge.html" class="nav-right">Return to EDGE Overview →</a>
 </div>
 
-    
-</div> <!-- closes .viz-grid -->
+</div> <!-- closes #main -->
+
+</div> <!-- closes #wrapper -->
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
