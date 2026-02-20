@@ -43,15 +43,27 @@
 The result is a reliable pipeline of high‑quality data that can support analytics, reporting, dashboards, and other data‑driven products.</p>
         
             
-         <h2>Extracting Data From External Sources</h2>
-<p>The extraction phase involved downloading the raw EDGE program files from the Memphis Open Data Portal and preparing them for import into a PostgreSQL database. This step required validating each file’s structure and ensuring the source data could be recognized by PostgreSQL before any transformation work could begin.</p>
-Challenges
-<ul><li><strong>Incompatible data types:</strong> Several fields used ArcGIS‑specific types that PostgreSQL could not interpret.</li><li><strong>Schema mismatches:</strong> The original tables did not align with PostgreSQL’s schema rules, causing import failures.</li></ul>
-Solution
-<ul><li>I rewrote the table schemas to replace ArcGIS‑specific field types with standard PostgreSQL types and restructured the tables to meet PostgreSQL’s schema requirements. This ensured every file could be imported cleanly and consistently.</li></ul>
-Why This Step Mattered
-<p>PostgreSQL will reject any file with incompatible types or invalid schema definitions. Resolving these issues during extraction ensured the pipeline would not fail during the load phase and created a stable foundation for all downstream transformation and analysis.</p>
+      <h2>Extracting Data From External Sources</h2>
 
+<p>
+The extraction phase focused on locating and downloading the five EDGE program files from the Memphis Open Data Portal and preparing them for the next stage of the pipeline. At this point, the goal was simply to gather the raw data and verify that each file could be opened, inspected, and passed forward for transformation.
+</p>
+
+<h3>Challenges</h3>
+<ul>
+    <li><strong>ArcGIS‑generated structures:</strong> The source files used ArcGIS conventions that did not align cleanly with PostgreSQL expectations.</li>
+    <li><strong>Early signs of schema inconsistencies:</strong> Field names, formats, and data types varied across programs, signaling the need for later standardization.</li>
+</ul>
+
+<h3>Solution</h3>
+<ul>
+    <li>I downloaded each dataset, inspected the raw structure, and documented the schema issues that would need to be addressed during the transformation phase. No restructuring occurred here — the goal was to capture the data exactly as provided and prepare it for systematic cleaning later.</li>
+</ul>
+
+<h3>Why This Step Mattered</h3>
+<p>
+A clean extraction ensures that the pipeline begins with complete, unaltered source data. By validating the files early and identifying structural issues without modifying them, I created a reliable foundation for the transformation work that follows. This separation of concerns keeps the ETL process organized, reproducible, and easier to debug.
+</p>
                 
          <hr/>
         <h2>Technical Details</h2>
