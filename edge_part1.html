@@ -65,27 +65,32 @@ The extraction phase focused on locating and downloading the five EDGE program f
 A clean extraction ensures that the pipeline begins with complete, unaltered source data. By validating the files early and identifying structural issues without modifying them, I created a reliable foundation for the transformation work that follows. This separation of concerns keeps the ETL process organized, reproducible, and easier to debug.
 </p>
                 
-         <hr/>
-        <h2>Technical Details</h2>
-        <ul>
-            <li>Standardized geographic fields (ZIP code, state, city, county) were cleaned and validated.</li>
-            <li>Currency fields included symbols and commas, which prevented type conversion. I used Excel’s Find and Replace tool to strip formatting before loading.</li>
-            <li>ArcGIS exports required schema redesign to align with PostgreSQL’s data types.</li>
-        </ul>
-         <hr/>
-         <h2>Challenges & Solutions</h2>
-            <h3>Inconsistent Naming Conventions</h3>
-            <p>Each EDGE program used different field names and formats. I analyzed each table individually, identified shared fields, and created a structure that could support all five datasets without losing important details.</p>
+         <h2>Transforming the Raw Data</h2>
 
-            <h3>Schema mismatches from ArcGIS</h3>
-            <p>ArcGIS exports didn’t align with PostgreSQL’s data types. I redesigned the schemas to ensure compatibility and consistency.</p>
+<p>
+The transformation phase focused on cleaning, standardizing, and restructuring the raw EDGE datasets so they could be loaded into PostgreSQL without errors. This step required rewriting schemas, converting ArcGIS-specific field types, and resolving inconsistencies across the five program files. The goal was to create a consistent, analysis-ready structure while preserving the integrity of the original data.
+</p>
 
-            <h3>Currency formatting issues</h3>
-            <p>Monetary values included symbols and commas. I removed these formatting characters before type conversion.</p>
+<h3>Challenges</h3>
+<ul>
+    <li><strong>Incompatible data types:</strong> Several fields used ArcGIS-specific types that PostgreSQL could not interpret.</li>
+    <li><strong>Schema mismatches:</strong> Field names, formats, and table structures varied across programs, preventing a clean import.</li>
+    <li><strong>Logical inconsistencies:</strong> Misspellings, malformed entries, and unnecessary fields appeared throughout the raw files.</li>
+    <li><strong>Currency formatting issues:</strong> Monetary values included symbols and commas, blocking type conversion.</li>
+</ul>
 
-            <h3>Logical errors and misspellings</h3>
-            <p>I corrected inconsistent spellings, fixed malformed entries, and removed unnecessary fields to improve data quality.</p>
+<h3>Solution</h3>
+<ul>
+    <li>I rewrote the table schemas to replace ArcGIS-specific field types with standard PostgreSQL types and aligned the structure of each dataset with a consistent schema pattern.</li>
+    <li>I standardized geographic fields (ZIP code, state, city, county) and corrected inconsistent spellings and malformed entries.</li>
+    <li>I removed formatting characters from currency fields to ensure they could be converted into numeric types.</li>
+    <li>I eliminated unnecessary or redundant fields to improve clarity and reduce noise in the final dataset.</li>
+</ul>
 
+<h3>Why This Step Mattered</h3>
+<p>
+Transformation is the most critical phase of the ETL pipeline. Without standardizing data types, fixing schema mismatches, and resolving inconsistencies, PostgreSQL would reject the files during loading or produce unreliable analytical results. By completing these transformations up front, I ensured that the final database would be clean, consistent, and ready for accurate analysis.
+</p>
         <hr/>
             <h2>Data Modeling Concepts</h2>
             <p>The EDGE datasets are flat, meaning each table stands alone without primary keys, foreign keys, or hierarchical relationships. Even though some tables share similar attributes, they are not relationally linked and can be analyzed independently.</p>
