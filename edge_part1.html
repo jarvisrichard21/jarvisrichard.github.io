@@ -93,11 +93,13 @@ Transformation is the most critical phase of the ETL pipeline. Without standardi
 </p>
             
         
-             <h2>What Comes Next</h2>   
-              <p>With the cleaned and standardized data now stored in PostgreSQL, the next phase of the project will focus on analysis. 
-            I plan to explore how financial incentives influence job creation, industry growth, and investment patterns across Memphis. 
-            This will include building analytical reports, visualizations, and dashboards that highlight the economic impact of EDGE programs.</p>  
+   <h2>Loading the Transformed Data into PostgreSQL</h2>
 
+<p>
+    The loading phase focused on importing the five cleaned EDGE datasets into PostgreSQL using the 
+    <strong>COPY</strong> command. After each import, I ran a simple <strong>SELECT</strong> query on every table 
+    to confirm that the rows aligned with their respective columns and that the data loaded cleanly into the schema.
+</p>
              <hr/>   
             <div class="nav-bottom">
                <a href="edge.html" class="nav-left">← Back to Project Overview</a>
