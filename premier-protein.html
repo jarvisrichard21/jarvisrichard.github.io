@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Premier Protein Retail Analysis | Jarvis Richard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-dark: #111827;
+      --bg-light: #f9fafb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --card-bg: #ffffff;
+      --border-soft: #e5e7eb;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-dark);
+      color: #f9fafb;
+      padding: 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: #d1d5db;
+      text-decoration: none;
+      margin: 0 0.75rem;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* Main layout */
+    main {
+      max-width: 960px;
+      margin: 2.5rem auto 3rem;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    /* Hero / title block */
+    .hero-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-tagline {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 640px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 0.5rem;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* SQL showcase */
+    .query-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .query-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .screenshot {
+      width: 100%;
+      border-radius: 0.4rem;
+      border: 1px solid var(--border-soft);
+      background: #f3f4f6;
+      min-height: 140px; /* placeholder; replace with actual <img> */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Lists */
+    ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.35rem;
+      font-size: 0.92rem;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--accent);
+      display: inline-block;
+      width: 1rem;
+    }
+
+    /* Inline meta lists */
+    .meta-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .meta-pill {
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      padding: 0.25rem 0.6rem;
+      background: #f3f4f6;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding-bottom: 2rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 1.25rem 1rem;
+      }
+      main {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JARVIS RICHARD</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Title -->
+    <section>
+      <div class="hero-title">Premier Protein Retail Analysis</div>
+      <p class="hero-tagline">
+        A SQL‑based exploration of retailer pricing, pack sizes, flavors, and promotions for Premier Protein listings.
+        Designed as a focused fundamentals project with clean, minimal presentation.
+      </p>
+    </section>
+
+    <!-- Overview -->
+    <section>
+      <div class="section-title">Project Overview</div>
+      <div class="card">
+        <p>
+          This project analyzes Premier Protein retail listings across multiple retailers using SQL Server Developer Edition.
+          The goal is to practice core SQL fundamentals—aggregation, joins, filtering, and granularity—while building a
+          portfolio‑ready, MIS‑aligned retail analysis.
+        </p>
+        <p style="margin-top:0.75rem;">
+          The dataset includes catalog, product, flavor, pack size, retailer, and promotion tables, allowing targeted questions
+          about pricing behavior, listing distribution, and promotional activity.
+        </p>
+      </div>
+    </section>
+
+    <!-- Dataset + Tools -->
+    <section>
+      <div class="section-title">Dataset & Tools</div>
+      <div class="card">
+        <p class="section-subtitle">Tables used in this project:</p>
+        <ul>
+          <li><strong>fact_catalog</strong> — core listing and price data</li>
+          <li><strong>dim_products</strong> — product and brand details</li>
+          <li><strong>dim_flavors</strong> — flavor names and IDs</li>
+          <li><strong>dim_pack_sizes</strong> — pack size definitions</li>
+          <li><strong>dim_retailers</strong> — retailer dimension</li>
+          <li><strong>fact_promotions</strong> — promotion events and promo prices</li>
+        </ul>
+
+        <p class="section-subtitle" style="margin-top:1.25rem;">Tools used:</p>
+        <div class="meta-list">
+          <span class="meta-pill">SQL Server Developer Edition</span>
+          <span class="meta-pill">T‑SQL</span>
+          <span class="meta-pill">GitHub Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SQL Fundamentals Showcase -->
+    <section>
+      <div class="section-title">SQL Fundamentals Showcase</div>
+      <p class="section-subtitle">
+        Five out of six core SQL questions completed, each focused on a specific concept: aggregation, joins, filtering,
+        and granularity.
+      </p>
+
+      <div class="grid">
+        <!-- Query 1 -->
+        <div class="card">
+          <div class="query-title">1. Listings per retailer</div>
+          <div class="query-desc">
+            Counts how many listings each retailer has in the catalog using <code>COUNT(*)</code> and <code>GROUP BY retailer_id</code>.
+          </div>
+          <div class="screenshot">
+            Screenshot: retailer listing counts (replace with actual image)
+          </div>
+        </div>
+
+        <!-- Query 2 -->
+        <div class="card">
+          <div class="query-title">2. Average price by pack size</div>
+          <div class="query-desc">
+            Calculates the average price for each pack_size_id across all retailers using <code>AVG(price)</code> and
+            <code>GROUP BY pack_size_id</code>.
+          </div>
+          <div class="screenshot">
+            Screenshot: average price per pack size
+          </div>
+        </div>
+
+        <!-- Query 3 -->
+        <div class="card">
+          <div class="query-title">3. Target listings with product & flavor names</div>
+          <div class="query-desc">
+            Returns all listings sold at Target (retailer_id = 4), including product and flavor names using
+            <code>JOIN</code> across catalog, products, flavors, and retailers with a <code>WHERE</code> filter.
+          </div>
+          <div class="screenshot">
+            Screenshot: Target listings with product & flavor details
+          </div>
+        </div>
+
+        <!-- Query 4 -->
+        <div class="card">
+          <div class="query-title">4. Promotions summary per retailer</div>
+          <div class="query-desc">
+            Calculates the total number of promotions and sum of promo_price for each retailer using
+            <code>COUNT(*)</code>, <code>SUM(promo_price)</code>, and <code>GROUP BY retailer_id</code>.
+          </div>
+          <div class="screenshot">
+            Screenshot: promotions count and total promo_price
+          </div>
+        </div>
+
+        <!-- Query 5 -->
+        <div class="card">
+          <div class="query-title">5. Additional fundamentals query</div>
+          <div class="query-desc">
+            Reserved for the sixth fundamentals question (e.g., flavor distribution, brand‑level pricing, or pack size
+            availability) to complete the set.
+          </div>
+          <div class="screenshot">
+            Screenshot: placeholder for sixth query
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Insights -->
+    <section>
+      <div class="section-title">Key Insights</div>
+      <div class="card">
+        <ul>
+          <li>Retailers show distinct listing volumes, highlighting differences in Premier Protein shelf presence.</li>
+          <li>Average price varies by pack size, suggesting a relationship between unit count and perceived value.</li>
+          <li>Target listings can be cleanly isolated and enriched with product and flavor details using joins.</li>
+          <li>Promotional activity clusters by retailer, visible through promotion counts and total promo_price.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills Demonstrated -->
+    <section>
+      <div class="section-title">Skills Demonstrated</div>
+      <div class="card">
+        <div class="meta-list">
+          <span class="meta-pill">SQL fundamentals (COUNT, AVG, SUM)</span>
+          <span class="meta-pill">JOIN logic across fact and dimension tables</span>
+          <span class="meta-pill">Granularity and GROUP BY discipline</span>
+          <span class="meta-pill">Retail data modeling</span>
+          <span class="meta-pill">Portfolio documentation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Repo link -->
+    <section>
+      <div class="section-title">Repository & Source Files</div>
+      <div class="card">
+        <p>
+          The SQL scripts, dataset files, and additional notes for this project are available in the corresponding GitHub
+          repository.
+        </p>
+        <p style="margin-top:0.5rem;">
+          <a href="https://github.com/your-username/your-premier-protein-repo" target="_blank">
+            View the Premier Protein Retail Analysis repository
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Jarvis Richard · Premier Protein Retail Analysis
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
